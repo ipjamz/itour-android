@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">iTour</string>
+
+    <string name="google_api_key">AIzaSyDzQ8mUPOcoMRVwP4x_S1gsT55bQXNTzWM</string>
+
+    <string name="title_main_activity">Main</string>
+    <string name="title_welcome_activity">Welcome</string>
+
+    <string name="menu_map">Map</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_sites">Sites</string>
+
+    <string name="exit">Do you want to exit?</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+</resources>
