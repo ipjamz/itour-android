@@ -1,4 +1,4 @@
-package com.peterjamesbabiera.itour_android.views.fragments.event;
+package com.peterjamesbabiera.itour_android.views.fragments.site;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -20,14 +20,14 @@ import java.util.List;
  * Created by peter on 2/28/18.
  */
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> implements View.OnClickListener {
+public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> implements View.OnClickListener {
 
     private AttractionLogic logic = AttractionLogic.getInstance();
-    private List<Attraction> events = new ArrayList<>();
+    private List<Attraction> sites = new ArrayList<>();
     private Attraction attraction;
 
-    public EventAdapter() {
-        events = logic.getEvent();
+    public SiteAdapter() {
+        sites = logic.getSites();
     }
 
     @Override
@@ -51,21 +51,21 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SiteAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_attraction_row, parent, false);
-        return new ViewHolder(view);
+        return new SiteAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        attraction = events.get(position);
+    public void onBindViewHolder(@NonNull SiteAdapter.ViewHolder holder, int position) {
+        attraction = sites.get(position);
         holder.mImage.setImageBitmap(attraction.getImage());
         holder.mName.setText(attraction.getName());
     }
 
     @Override
     public int getItemCount() {
-        return events.size();
+        return sites.size();
     }
 
 }

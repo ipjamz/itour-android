@@ -1,4 +1,4 @@
-package com.peterjamesbabiera.itour_android.views.fragments.event;
+package com.peterjamesbabiera.itour_android.views.fragments.site;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import com.peterjamesbabiera.itour_android.R;
  * Created by peter on 2/28/18.
  */
 
-public class EventFragment extends Fragment {
+public class SiteFragment extends Fragment {
 
     private View mMainView;
     private RecyclerView mRecyclerView;
@@ -25,7 +25,7 @@ public class EventFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        mMainView = inflater.inflate(R.layout.fragment_event, container, false);
+        mMainView = inflater.inflate(R.layout.fragment_site, container, false);
         return mMainView;
     }
 
@@ -38,8 +38,9 @@ public class EventFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new EventAdapter();
+        mAdapter = new SiteAdapter();
         mRecyclerView.setAdapter(mAdapter);
 
     }
+
 }

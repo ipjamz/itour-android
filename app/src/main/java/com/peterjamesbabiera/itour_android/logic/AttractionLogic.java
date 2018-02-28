@@ -35,6 +35,30 @@ public class AttractionLogic {
         event.setName("Dinagyang");
         events.add(event);
 
+        Attraction event2 = new Attraction();
+        Bitmap image2 = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
+        event2.setImage(image2);
+        event2.setName("Ati-atihan");
+        events.add(event2);
+
         return events;
+    }
+
+    public List<Attraction> getSites() {
+        List<Attraction> sites = new ArrayList<>();
+
+        Attraction site = new Attraction();
+        Bitmap image = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
+        site.setImage(image);
+        site.setName("Dinagyang");
+        sites.add(site);
+
+        Attraction site2 = new Attraction();
+        Bitmap image2 = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
+        site2.setImage(image2);
+        site2.setName("Ati-atihan");
+        sites.add(site2);
+
+        return sites;
     }
 }
