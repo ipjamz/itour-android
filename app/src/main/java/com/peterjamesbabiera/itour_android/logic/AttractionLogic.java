@@ -1,9 +1,9 @@
 package com.peterjamesbabiera.itour_android.logic;
 
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import com.peterjamesbabiera.itour_android.ITourApplication;
 import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.data.Attraction;
 
@@ -30,8 +30,7 @@ public class AttractionLogic {
         List<Attraction> events = new ArrayList<>();
 
         Attraction event = new Attraction();
-        Bitmap image = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.ic_dinagyang);
-
+        Bitmap image = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
         event.setImage(image);
         event.setName("Dinagyang");
         events.add(event);

@@ -50,7 +50,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         holder.mImage.setImageBitmap(event.get(position).getImage());
         holder.mName.setText(event.get(position).getName());
     }
