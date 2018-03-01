@@ -14,6 +14,7 @@ import com.peterjamesbabiera.itour_android.ITourApplication;
 import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.data.Attraction;
 import com.peterjamesbabiera.itour_android.logic.AttractionLogic;
+import com.peterjamesbabiera.itour_android.views.CustomViewListener;
 import com.peterjamesbabiera.itour_android.views.activities.DetailedSiteActivity;
 
 import java.util.ArrayList;
@@ -27,12 +28,15 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> im
 
     private AttractionLogic logic = AttractionLogic.getInstance();
     private List<Attraction> sites = new ArrayList<>();
-    private Attraction attraction;
+    private Attraction site;
 
     private ViewGroup mViewGroup;
 
-    public SiteAdapter() {
-        sites = logic.getSites();
+    private CustomViewListener mListener;
+
+    public SiteAdapter(CustomViewListener listener) {
+        this.sites = logic.getSites();
+        this.mListener = listener;
     }
 
     @Override
@@ -41,17 +45,24 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> im
         mViewGroup.getContext().startActivity(intent);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public ImageView mImage;
         public TextView mName;
-        public View mView;
 
-        public ViewHolder(View itemView) {
+        private CustomViewListener mListener;
+
+        public ViewHolder(View itemView, CustomViewListener listener) {
             super(itemView);
-            mView = itemView.findViewById(R.id.rv_attaction);
             mImage = itemView.findViewById(R.id.viewImage);
             mName = itemView.findViewById(R.id.tv_name);
+            mListener = listener;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            mListener.onClick(view, sites.get(getAdapterPosition()));
         }
     }
 
@@ -59,16 +70,14 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> im
     @Override
     public SiteAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_attraction_row, parent, false);
-        mViewGroup = parent;
-        return new SiteAdapter.ViewHolder(view);
+        return new SiteAdapter.ViewHolder(view, mListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SiteAdapter.ViewHolder holder, int position) {
-        attraction = sites.get(position);
-        holder.mImage.setImageBitmap(BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), attraction.getImageId()));
-        holder.mName.setText(attraction.getName());
-        holder.mView.setOnClickListener(this);
+        site = sites.get(position);
+        holder.mImage.setImageBitmap(BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), site.getImageId()));
+        holder.mName.setText(site.getName());
     }
 
     @Override

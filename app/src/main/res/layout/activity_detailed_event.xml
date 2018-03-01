@@ -43,7 +43,7 @@
                 android:layout_below="@+id/viewImage"
                 android:layout_margin="10dp"
                 android:text="No Image"
-                android:textAlignment="center" />
+                android:textAlignment="textStart" />
 
         </LinearLayout>
 
