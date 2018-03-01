@@ -1,6 +1,5 @@
 package com.peterjamesbabiera.itour_android.views.fragments.site;
 
-import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -15,7 +14,6 @@ import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.data.Attraction;
 import com.peterjamesbabiera.itour_android.logic.AttractionLogic;
 import com.peterjamesbabiera.itour_android.views.CustomViewListener;
-import com.peterjamesbabiera.itour_android.views.activities.DetailedSiteActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,25 +22,16 @@ import java.util.List;
  * Created by peter on 2/28/18.
  */
 
-public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> implements View.OnClickListener {
-
+public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> {
     private AttractionLogic logic = AttractionLogic.getInstance();
     private List<Attraction> sites = new ArrayList<>();
     private Attraction site;
-
-    private ViewGroup mViewGroup;
 
     private CustomViewListener mListener;
 
     public SiteAdapter(CustomViewListener listener) {
         this.sites = logic.getSites();
         this.mListener = listener;
-    }
-
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(mViewGroup.getContext(), DetailedSiteActivity.class);
-        mViewGroup.getContext().startActivity(intent);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

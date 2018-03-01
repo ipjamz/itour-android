@@ -14,7 +14,6 @@ public class AttractionLogic {
 
     private static AttractionLogic instance;
 
-
     public static AttractionLogic getInstance() {
         if (instance == null) {
             instance = new AttractionLogic();

@@ -3,8 +3,6 @@ package com.peterjamesbabiera.itour_android.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.android.gms.maps.model.LatLng;
-
 /**
  * Created by peter on 2/28/18.
  */
@@ -14,17 +12,20 @@ public class Attraction implements Parcelable {
     private String name;
     private String info;
     private int infoImageId;
-    private LatLng latLng;
+    private double latitude;
+    private double longitude;
 
     public Attraction() {
     }
+
 
     protected Attraction(Parcel in) {
         imageId = in.readInt();
         name = in.readString();
         info = in.readString();
         infoImageId = in.readInt();
-        latLng = in.readParcelable(LatLng.class.getClassLoader());
+        latitude = in.readDouble();
+        longitude = in.readDouble();
     }
 
     public static final Creator<Attraction> CREATOR = new Creator<Attraction>() {
@@ -71,12 +72,20 @@ public class Attraction implements Parcelable {
         this.infoImageId = infoImageId;
     }
 
-    public LatLng getLatLng() {
-        return latLng;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLatLng(LatLng latLng) {
-        this.latLng = latLng;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     @Override
@@ -90,6 +99,7 @@ public class Attraction implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(info);
         parcel.writeInt(infoImageId);
-        parcel.writeParcelable(latLng, i);
+        parcel.writeDouble(latitude);
+        parcel.writeDouble(longitude);
     }
 }

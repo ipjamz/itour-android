@@ -18,6 +18,7 @@ import android.view.View;
 
 import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.views.fragments.MapFragment;
+import com.peterjamesbabiera.itour_android.views.fragments.contact.ContactFragment;
 import com.peterjamesbabiera.itour_android.views.fragments.event.EventFragment;
 import com.peterjamesbabiera.itour_android.views.fragments.site.SiteFragment;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private MapFragment mapFragment = new MapFragment();
     private EventFragment eventFragment = new EventFragment();
     private SiteFragment siteFragment = new SiteFragment();
+    private ContactFragment contactFragment = new ContactFragment();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.action_menu_sites:
                 showFragment(siteFragment);
                 getSupportActionBar().setTitle(getString(R.string.menu_sites));
+                return true;
+            case R.id.action_menu_contacts:
+                showFragment(contactFragment);
+                getSupportActionBar().setTitle(getString(R.string.menu_contacts));
                 return true;
             default:
                 return true;
