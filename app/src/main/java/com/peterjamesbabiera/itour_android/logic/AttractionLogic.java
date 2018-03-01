@@ -1,9 +1,5 @@
 package com.peterjamesbabiera.itour_android.logic;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
-import com.peterjamesbabiera.itour_android.ITourApplication;
 import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.data.Attraction;
 
@@ -30,14 +26,19 @@ public class AttractionLogic {
         List<Attraction> events = new ArrayList<>();
 
         Attraction event = new Attraction();
-        Bitmap image = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
-        event.setImage(image);
+        event.setImageId(R.drawable.ic_dinagyang);
         event.setName("Dinagyang");
+        event.setInfo("The Iloilo Dinagyang Festival is a showcase of the rich heritage, " +
+                "colorful history, passionate devotion, and fun-loving spirit " +
+                "of the Ilonggo people. The festival traces its roots as a " +
+                "thanksgiving celebration in honor of Senyor Santo Niño, the child Jesus." +
+                " Today, it has grown to be one of the Philippines’ most spectacular religious" +
+                " and cultural festivals.");
+        event.setInfoImageId(R.drawable.ic_dinagyang2);
         events.add(event);
 
         Attraction event2 = new Attraction();
-        Bitmap image2 = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
-        event2.setImage(image2);
+        event2.setImageId(R.drawable.ic_dinagyang2);
         event2.setName("Ati-atihan");
         events.add(event2);
 
@@ -48,17 +49,16 @@ public class AttractionLogic {
         List<Attraction> sites = new ArrayList<>();
 
         Attraction site = new Attraction();
-        Bitmap image = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
-        site.setImage(image);
+        site.setImageId(R.drawable.ic_dinagyang);
         site.setName("Dinagyang");
         sites.add(site);
 
         Attraction site2 = new Attraction();
-        Bitmap image2 = BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), R.drawable.ic_dinagyang);
-        site2.setImage(image2);
+        site2.setImageId(R.drawable.ic_dinagyang);
         site2.setName("Ati-atihan");
         sites.add(site2);
 
         return sites;
     }
+
 }

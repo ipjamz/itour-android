@@ -5,6 +5,8 @@
 
     <string name="title_main_activity">Main</string>
     <string name="title_welcome_activity">Welcome</string>
+    <string name="title_detailed_event_activity">Detailed Event</string>
+    <string name="title_detailed_site_activity">Detailed Site</string>
 
     <string name="menu_map">Map</string>
     <string name="menu_events">Events</string>

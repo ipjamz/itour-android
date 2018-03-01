@@ -1,17 +1,20 @@
 package com.peterjamesbabiera.itour_android.views.fragments.site;
 
+import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.peterjamesbabiera.itour_android.ITourApplication;
 import com.peterjamesbabiera.itour_android.R;
 import com.peterjamesbabiera.itour_android.data.Attraction;
 import com.peterjamesbabiera.itour_android.logic.AttractionLogic;
+import com.peterjamesbabiera.itour_android.views.activities.DetailedSiteActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +29,16 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> im
     private List<Attraction> sites = new ArrayList<>();
     private Attraction attraction;
 
+    private ViewGroup mViewGroup;
+
     public SiteAdapter() {
         sites = logic.getSites();
     }
 
     @Override
     public void onClick(View view) {
-        Log.w("~~~~~~~~~Name", "");
+        Intent intent = new Intent(mViewGroup.getContext(), DetailedSiteActivity.class);
+        mViewGroup.getContext().startActivity(intent);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -53,14 +59,16 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> im
     @Override
     public SiteAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_attraction_row, parent, false);
+        mViewGroup = parent;
         return new SiteAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SiteAdapter.ViewHolder holder, int position) {
         attraction = sites.get(position);
-        holder.mImage.setImageBitmap(attraction.getImage());
+        holder.mImage.setImageBitmap(BitmapFactory.decodeResource(ITourApplication.getContext().getResources(), attraction.getImageId()));
         holder.mName.setText(attraction.getName());
+        holder.mView.setOnClickListener(this);
     }
 
     @Override

@@ -126,9 +126,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setTitle(getString(R.string.menu_map));
         }
-
-        getSupportActionBar().setTitle(getString(R.string.menu_map));
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar,
                 R.string.drawer_open, R.string.drawer_close);
