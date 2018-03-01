@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.peterjamesbabiera.itour_android.R;
+import com.peterjamesbabiera.itour_android.views.fragments.AboutFragment;
 import com.peterjamesbabiera.itour_android.views.fragments.MapFragment;
 import com.peterjamesbabiera.itour_android.views.fragments.contact.ContactFragment;
 import com.peterjamesbabiera.itour_android.views.fragments.event.EventFragment;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private EventFragment eventFragment = new EventFragment();
     private SiteFragment siteFragment = new SiteFragment();
     private ContactFragment contactFragment = new ContactFragment();
+    private AboutFragment aboutFragment = new AboutFragment();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.action_menu_contacts:
                 showFragment(contactFragment);
                 getSupportActionBar().setTitle(getString(R.string.menu_contacts));
+                return true;
+            case R.id.action_menu_about:
+                showFragment(aboutFragment);
+                getSupportActionBar().setTitle(getString(R.string.menu_about));
                 return true;
             default:
                 return true;
