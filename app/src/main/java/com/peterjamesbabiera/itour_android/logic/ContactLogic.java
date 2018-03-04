@@ -26,12 +26,12 @@ public class ContactLogic {
 
         Contact hospital = new Contact();
         hospital.setName("Medicus Medical Center");
-        hospital.setNumber("0333287777");
+        hospital.setNumber("09092212334");
         contacts.add(hospital);
 
         Contact police = new Contact();
         police.setName("Iloilo City Police Office");
-        police.setNumber("0333287777");
+        police.setNumber("09092212334");
         contacts.add(police);
 
         Contact emergencyHotline = new Contact();

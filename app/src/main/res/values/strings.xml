@@ -13,11 +13,20 @@
     <string name="menu_sites">Sites</string>
     <string name="menu_contacts">Contacts</string>
     <string name="menu_about">About</string>
+    <string name="menu_festivals">Festivals</string>
+    <string name="menu_churches">Churches</string>
+    <string name="menu_real_estate">Real Estate</string>
+    <string name="menu_historic">Historic</string>
+    <string name="menu_night_life">Night Life</string>
+    <string name="menu_promenade">Promenade</string>
+    <string name="menu_delicacies">Delicacies</string>
 
     <string name="exit">Do you want to exit?</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
-    <string name="permission_phone">Do you want to phone permission?</string>
+    <string name="permission_phone">PLease allow phone permission.</string>
+    <string name="permission_location">PLease allow location permission.</string>
+    <string name="current_location">You\'re Here</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -25,6 +34,6 @@
     <string name="development_team">Development Team</string>
     <string name="lead_programmer">Lead Programmer: Gil Palma</string>
     <string name="lead_designer">Lead Designer: Gil Palma</string>
-    <string name="resource_manager">Resource Manager: Marc Gabrylle Doromal</string>
+    <string name="resource_manager">Resource Manager: Marc Gabriel Doromal</string>
     <string name="researcher">Researcher: John Paolo Medina</string>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_menu_festivals"
+        android:title="@string/menu_festivals" />
+    <item
+        android:id="@+id/action_menu_churches"
+        android:title="@string/menu_churches" />
+
+    <item
+        android:id="@+id/action_menu_real_estate"
+        android:title="@string/menu_real_estate" />
+
+    <item
+        android:id="@+id/action_menu_historic"
+        android:title="@string/menu_historic" />
+
+    <item
+        android:id="@+id/action_menu_night_life"
+        android:title="@string/menu_night_life" />
+
+    <item
+        android:id="@+id/action_menu_promenade"
+        android:title="@string/menu_promenade" />
+
+    <item
+        android:id="@+id/actionmenu_delicacies"
+        android:title="@string/menu_delicacies" />
+</menu>

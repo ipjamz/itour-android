@@ -63,6 +63,8 @@ public class AttractionLogic {
                 "by order of His Excellency Jose Ma. Cuenco, first archbishop of Jaro in 1956. The cathedral’s " +
                 "style is basically Baroque, with the addition of Gothic elements over many renovations.");
         jaroChurch.setInfoImageId(R.drawable.ic_jaro_church2);
+        jaroChurch.setLatitude(10.69);
+        jaroChurch.setLongitude(125.55);
         sites.add(jaroChurch);
 
         Attraction moloChurch = new Attraction();
@@ -74,6 +76,8 @@ public class AttractionLogic {
                 "Built in neogothic style, the church is one of the Iloilo City’s most familiar landmarks and top " +
                 "tourist attractions.");
         moloChurch.setInfoImageId(R.drawable.ic_molo_church2);
+        moloChurch.setLatitude(10.7);
+        moloChurch.setLongitude(122.55);
         sites.add(moloChurch);
 
         Attraction iloiloBusinessPark = new Attraction();
@@ -85,6 +89,8 @@ public class AttractionLogic {
                 "McKinley Hill in Bonifacio Global City, Taguig; and Newport City in Pasay City, home of the famous " +
                 "Resorts World Manila.");
         iloiloBusinessPark.setInfoImageId(R.drawable.ic_iloilo_business_park2);
+        iloiloBusinessPark.setLatitude(10.714722);
+        iloiloBusinessPark.setLongitude(122.544722);
         sites.add(iloiloBusinessPark);
 
         Attraction museoIloilo = new Attraction();
@@ -97,6 +103,8 @@ public class AttractionLogic {
                 "Mementos and war relics; a British sunken ship; Spanish-era Filipino sculpture; and modern art done by " +
                 "Ilonggo artists and craftsmen.");
         museoIloilo.setInfoImageId(R.drawable.ic_museo_iloilo2);
+        museoIloilo.setLatitude(10.7027902);
+        museoIloilo.setLongitude(122.5684267);
         sites.add(museoIloilo);
 
         Attraction calleReal = new Attraction();
@@ -109,6 +117,8 @@ public class AttractionLogic {
                 "its importance has dwindled and the street has become less maintained; yet there have been efforts to revitalize " +
                 "the street which includes the restoration of the historic buildings along the street and beautification projects.");
         calleReal.setInfoImageId(R.drawable.ic_calle_real2);
+        calleReal.setLatitude(10.6945032);
+        calleReal.setLongitude(122.5682651);
         sites.add(calleReal);
 
         Attraction casaRealDeIloilo = new Attraction();
@@ -118,6 +128,8 @@ public class AttractionLogic {
                 "a National Historical Site by the NHI (National Historical Institute). It is the old edifice fronting the Arroyo " +
                 "Fountain in Iloilo, Philippines.");
         casaRealDeIloilo.setInfoImageId(R.drawable.ic_casa_real_de_iloilo2);
+        casaRealDeIloilo.setLatitude(10.7017068);
+        casaRealDeIloilo.setLongitude(122.5689862);
         sites.add(casaRealDeIloilo);
 
         Attraction smallVille = new Attraction();
@@ -128,6 +140,8 @@ public class AttractionLogic {
                 "District, Iloilo City. A footwalk connects Smallville to the Iloilo River Esplanade to the south and a road joins it with " +
                 "Atria Park District by Ayala on its northern side.");
         smallVille.setInfoImageId(R.drawable.ic_smallville2);
+        smallVille.setLatitude(10.7054497);
+        smallVille.setLongitude(122.551921);
         sites.add(smallVille);
 
         Attraction esplanade = new Attraction();
@@ -137,7 +151,9 @@ public class AttractionLogic {
                 "Iloilo River. It is one of best showcases of the city’s efforts to rehabilitate and protect the Iloilo River and promote " +
                 "active lifestyles. It is also a popular tourist spot where visitors can enjoy a leisurely stroll and enjoy the serene views " +
                 "along the river.");
-        esplanade.setInfoImageId(R.drawable.ic_esplanade);
+        esplanade.setInfoImageId(R.drawable.ic_esplanade2);
+        esplanade.setLatitude(10.702015);
+        esplanade.setLongitude(122.544905);
         sites.add(esplanade);
 
         Attraction plazaLibertad = new Attraction();
@@ -148,6 +164,8 @@ public class AttractionLogic {
                 "Spain surrendered Iloilo, her last capital in the Philippines, to the revolutionary forces led by Gen. Martin Delgado " +
                 "on December 25, 1898.");
         plazaLibertad.setInfoImageId(R.drawable.ic_plaza_libertad2);
+        plazaLibertad.setLatitude(10.6925);
+        plazaLibertad.setLongitude(122.5736);
         sites.add(plazaLibertad);
 
         Attraction biscochoHaus = new Attraction();
@@ -160,7 +178,9 @@ public class AttractionLogic {
                 "those out of the country. The growing demand for new variety inspired the Guadarramas to come up with new product lines, " +
                 "most were honed in the kitchens of the Guadarrama-Jalandoni clans. Biscocho Haus bakes its own breads and turns them into the " +
                 "famous Biscocho.");
-        biscochoHaus.setInfoImageId(R.drawable.ic_biscocho_haus);
+        biscochoHaus.setInfoImageId(R.drawable.ic_biscocho_haus2);
+        biscochoHaus.setLatitude(10.7011271);
+        biscochoHaus.setLongitude(122.5670419);
         sites.add(biscochoHaus);
 
         Attraction deocampo = new Attraction();
@@ -172,6 +192,8 @@ public class AttractionLogic {
                 "of a bowl of halo-halo or cup of ice cream: Barquillos. Deocampo offers the tastiest- the sweetest and every-crumb-is-worth-picking" +
                 "-up-barquillos.");
         deocampo.setInfoImageId(R.drawable.ic_deocampo2);
+        deocampo.setLatitude(10.7247802);
+        deocampo.setLongitude(122.5523028);
         sites.add(deocampo);
 
         return sites;
