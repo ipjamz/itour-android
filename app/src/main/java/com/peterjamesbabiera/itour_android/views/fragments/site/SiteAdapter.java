@@ -29,9 +29,10 @@ public class SiteAdapter extends RecyclerView.Adapter<SiteAdapter.ViewHolder> {
 
     private CustomViewListener mListener;
 
-    public SiteAdapter(CustomViewListener listener) {
-        this.sites = logic.getSites();
+    public SiteAdapter(CustomViewListener listener, List<Attraction> sites) {
+        this.sites = sites;
         this.mListener = listener;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

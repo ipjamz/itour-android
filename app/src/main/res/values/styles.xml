@@ -11,6 +11,7 @@
     <style name="ToolBarTheme" parent="Theme.AppCompat">
         <item name="colorPrimaryDark">@color/colorYellow</item>
         <item name="android:textColorPrimary">@color/colorPurple</item>
+        <item name="android:colorBackground">@color/colorYellow</item>
     </style>
 
 </resources>

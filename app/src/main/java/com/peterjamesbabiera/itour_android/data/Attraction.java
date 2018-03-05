@@ -14,10 +14,10 @@ public class Attraction implements Parcelable {
     private int infoImageId;
     private double latitude;
     private double longitude;
+    private String category;
 
     public Attraction() {
     }
-
 
     protected Attraction(Parcel in) {
         imageId = in.readInt();
@@ -26,6 +26,7 @@ public class Attraction implements Parcelable {
         infoImageId = in.readInt();
         latitude = in.readDouble();
         longitude = in.readDouble();
+        category = in.readString();
     }
 
     public static final Creator<Attraction> CREATOR = new Creator<Attraction>() {
@@ -88,6 +89,14 @@ public class Attraction implements Parcelable {
         this.longitude = longitude;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -101,5 +110,6 @@ public class Attraction implements Parcelable {
         parcel.writeInt(infoImageId);
         parcel.writeDouble(latitude);
         parcel.writeDouble(longitude);
+        parcel.writeString(category);
     }
 }

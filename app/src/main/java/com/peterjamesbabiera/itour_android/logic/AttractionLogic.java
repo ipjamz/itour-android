@@ -65,6 +65,7 @@ public class AttractionLogic {
         jaroChurch.setInfoImageId(R.drawable.ic_jaro_church2);
         jaroChurch.setLatitude(10.69);
         jaroChurch.setLongitude(125.55);
+        jaroChurch.setCategory("church");
         sites.add(jaroChurch);
 
         Attraction moloChurch = new Attraction();
@@ -78,6 +79,7 @@ public class AttractionLogic {
         moloChurch.setInfoImageId(R.drawable.ic_molo_church2);
         moloChurch.setLatitude(10.7);
         moloChurch.setLongitude(122.55);
+        moloChurch.setCategory("church");
         sites.add(moloChurch);
 
         Attraction iloiloBusinessPark = new Attraction();
@@ -91,6 +93,7 @@ public class AttractionLogic {
         iloiloBusinessPark.setInfoImageId(R.drawable.ic_iloilo_business_park2);
         iloiloBusinessPark.setLatitude(10.714722);
         iloiloBusinessPark.setLongitude(122.544722);
+        iloiloBusinessPark.setCategory("real estate");
         sites.add(iloiloBusinessPark);
 
         Attraction museoIloilo = new Attraction();
@@ -105,6 +108,7 @@ public class AttractionLogic {
         museoIloilo.setInfoImageId(R.drawable.ic_museo_iloilo2);
         museoIloilo.setLatitude(10.7027902);
         museoIloilo.setLongitude(122.5684267);
+        museoIloilo.setCategory("historic");
         sites.add(museoIloilo);
 
         Attraction calleReal = new Attraction();
@@ -119,6 +123,7 @@ public class AttractionLogic {
         calleReal.setInfoImageId(R.drawable.ic_calle_real2);
         calleReal.setLatitude(10.6945032);
         calleReal.setLongitude(122.5682651);
+        calleReal.setCategory("historic");
         sites.add(calleReal);
 
         Attraction casaRealDeIloilo = new Attraction();
@@ -130,6 +135,7 @@ public class AttractionLogic {
         casaRealDeIloilo.setInfoImageId(R.drawable.ic_casa_real_de_iloilo2);
         casaRealDeIloilo.setLatitude(10.7017068);
         casaRealDeIloilo.setLongitude(122.5689862);
+        casaRealDeIloilo.setCategory("historic");
         sites.add(casaRealDeIloilo);
 
         Attraction smallVille = new Attraction();
@@ -142,6 +148,7 @@ public class AttractionLogic {
         smallVille.setInfoImageId(R.drawable.ic_smallville2);
         smallVille.setLatitude(10.7054497);
         smallVille.setLongitude(122.551921);
+        smallVille.setCategory("night life");
         sites.add(smallVille);
 
         Attraction esplanade = new Attraction();
@@ -154,6 +161,7 @@ public class AttractionLogic {
         esplanade.setInfoImageId(R.drawable.ic_esplanade2);
         esplanade.setLatitude(10.702015);
         esplanade.setLongitude(122.544905);
+        esplanade.setCategory("promenade");
         sites.add(esplanade);
 
         Attraction plazaLibertad = new Attraction();
@@ -166,6 +174,7 @@ public class AttractionLogic {
         plazaLibertad.setInfoImageId(R.drawable.ic_plaza_libertad2);
         plazaLibertad.setLatitude(10.6925);
         plazaLibertad.setLongitude(122.5736);
+        plazaLibertad.setCategory("promenade");
         sites.add(plazaLibertad);
 
         Attraction biscochoHaus = new Attraction();
@@ -181,6 +190,7 @@ public class AttractionLogic {
         biscochoHaus.setInfoImageId(R.drawable.ic_biscocho_haus2);
         biscochoHaus.setLatitude(10.7011271);
         biscochoHaus.setLongitude(122.5670419);
+        biscochoHaus.setCategory("delicacies");
         sites.add(biscochoHaus);
 
         Attraction deocampo = new Attraction();
@@ -194,6 +204,7 @@ public class AttractionLogic {
         deocampo.setInfoImageId(R.drawable.ic_deocampo2);
         deocampo.setLatitude(10.7247802);
         deocampo.setLongitude(122.5523028);
+        deocampo.setCategory("delicacies");
         sites.add(deocampo);
 
         return sites;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_menu_festivals"
-        android:title="@string/menu_festivals" />
+        android:id="@+id/action_menu_all_sites"
+        android:title="@string/menu_all_sites" />
     <item
         android:id="@+id/action_menu_churches"
         android:title="@string/menu_churches" />
