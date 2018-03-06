@@ -21,6 +21,13 @@
     <string name="menu_promenade">Promenade</string>
     <string name="menu_delicacies">Delicacies</string>
 
+    <string name="category_church">church</string>
+    <string name="category_real_estate">real estate</string>
+    <string name="category_historic">historic</string>
+    <string name="category_night_life">night life</string>
+    <string name="category_promenade">promenade</string>
+    <string name="category_delicacy">delicacy</string>
+
     <string name="exit">Do you want to exit?</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>

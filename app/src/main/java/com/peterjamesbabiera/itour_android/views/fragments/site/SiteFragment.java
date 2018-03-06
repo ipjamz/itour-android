@@ -77,24 +77,25 @@ public class SiteFragment extends Fragment implements CustomViewListener<Attract
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_menu_all_sites:
+                mRecyclerView.setAdapter(new SiteAdapter(this, sites));
                 return true;
             case R.id.action_menu_churches:
-                filterSites("church");
+                filterSites(getString(R.string.category_church));
                 return true;
             case R.id.action_menu_real_estate:
-                filterSites("real estate");
+                filterSites(getString(R.string.category_real_estate));
                 return true;
             case R.id.action_menu_historic:
-                filterSites("historic");
+                filterSites(getString(R.string.category_historic));
                 return true;
             case R.id.action_menu_night_life:
-                filterSites("night life");
+                filterSites(getString(R.string.category_night_life));
                 return true;
             case R.id.action_menu_promenade:
-                filterSites("promenade");
+                filterSites(getString(R.string.category_promenade));
                 return true;
             case R.id.actionmenu_delicacies:
-                filterSites("delicacies");
+                filterSites(getString(R.string.category_delicacy));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

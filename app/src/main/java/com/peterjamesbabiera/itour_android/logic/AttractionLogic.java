@@ -190,7 +190,7 @@ public class AttractionLogic {
         biscochoHaus.setInfoImageId(R.drawable.ic_biscocho_haus2);
         biscochoHaus.setLatitude(10.7011271);
         biscochoHaus.setLongitude(122.5670419);
-        biscochoHaus.setCategory("delicacies");
+        biscochoHaus.setCategory("delicacy");
         sites.add(biscochoHaus);
 
         Attraction deocampo = new Attraction();
@@ -204,7 +204,7 @@ public class AttractionLogic {
         deocampo.setInfoImageId(R.drawable.ic_deocampo2);
         deocampo.setLatitude(10.7247802);
         deocampo.setLongitude(122.5523028);
-        deocampo.setCategory("delicacies");
+        deocampo.setCategory("delicacy");
         sites.add(deocampo);
 
         return sites;
